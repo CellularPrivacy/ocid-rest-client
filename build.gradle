@@ -1,9 +1,20 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        classpath 'io.freefair.gradle-plugins:git-version:2.0.0-beta5'
+    }
+}
+
 repositories {
     jcenter()
 }
 
 group = "com.github.cellularprivacy"
 
+apply plugin: 'io.freefair.git-version'
 apply plugin: 'java'
 apply plugin: 'maven'
 
