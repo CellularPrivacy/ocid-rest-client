@@ -19,7 +19,7 @@ public class MeasureClient extends Client<MeasureService> {
         super(ocidRestClient, service);
     }
 
-    Call<String> uploadCsv(String csv) {
+    public Call<String> uploadCsv(String csv) {
         return service.uploadCsv(
                 ocidRestClient.getApiKey(),
                 MultipartBody.Part.createFormData(
@@ -33,7 +33,7 @@ public class MeasureClient extends Client<MeasureService> {
         );
     }
 
-    Call<String> uploadCsv(File csvFile) {
+    public Call<String> uploadCsv(File csvFile) {
         return service.uploadCsv(
                 ocidRestClient.getApiKey(),
                 MultipartBody.Part.createFormData(
@@ -47,7 +47,7 @@ public class MeasureClient extends Client<MeasureService> {
         );
     }
 
-    Call<Status> uploadJson(String json) {
+    public Call<Status> uploadJson(String json) {
         return service.uploadJson(
                 ocidRestClient.getApiKey(),
                 MultipartBody.Part.createFormData(
@@ -61,7 +61,7 @@ public class MeasureClient extends Client<MeasureService> {
         );
     }
 
-    Call<Status> uploadJson(File jsonFile) {
+    public Call<Status> uploadJson(File jsonFile) {
         return service.uploadJson(
                 ocidRestClient.getApiKey(),
                 MultipartBody.Part.createFormData(
